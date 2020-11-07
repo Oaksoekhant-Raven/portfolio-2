@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    overflow: hidden;
+    padding-left: 8%;
+    padding-right: 8%;
+
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+nav {
+    flex: 1;
+    text-align: center;
+}
+ul{
+    overflow: hidden;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right:  35px;
+}
+nav ul li a {
+    text-decoration: none;
+}
+#menu-list :hover {
+    color: blue;
+}
+.menu-bar {
+    width: 25px;
+    cursor: pointer;
+    font-size: 25px;
+    display: none;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+.col {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.col h2 {
+    font-size: 40px;
+}
+.col h3 {
+    font-size: 30px;
+    margin: 25px 0 10px;
+    color: #707070;
+    font-weight: 100;
+
+}
+.map {
+    margin: 30px 5px ;
+}
+button {
+    border-radius: 8px;
+    padding: 7px;
+    border: none;
+    background: #006FCD;
+    color: white;
+    cursor: pointer;
+}
+button a {
+    color: white;
+    text-decoration: none;
+}
+button:hover {
+    background: cyan;
+}
+.col-2 {
+    flex-basis: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.col-2 img {
+    width: 95%;
+}
+.container-2 h2 {
+    padding-left: 45%;
+}
+.container-2 {
+    background: #dfdfdf;
+    padding: 20px;
+    color: black;
+}
+.para {
+    margin-top: 25px;
+    padding-left: 8%;
+    width: 80%;
+}
+.container-2 .fab {
+    margin-top: 35px;
+    font-size: 50px;
+    text-align: center;
+    width: 18%;
+}
+.post {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 30px;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.post a {
+    text-decoration: none;
+}
+.fade{
+    opacity: 0;
+   
+    box-shadow: -2px 7px 21px -9px rgba(10, 10, 10, 0.75);
+}
+.main h2 {
+    text-align: center;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.post .fade {
+    width: 80%;
+    
+}
+.sector-1 {
+    position: relative;
+}
+
+.sector-1 img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.sector-1 h6{
+    font-size: 20px;
+    color: black;
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+.sector-1:hover .image {
+    opacity: 0.3;
+}
+.sector-1:hover .middle {
+    opacity: 1;
+} 
+.icon {
+    font-size: 20px;
+    color: black;
+}
+#icon-1 {
+    color: red;
+}
+#icon-2 {
+    color: blue;
+}
+#icon-3 {
+    color: yellow;
+}
+#icon-5 {
+    color: blue;
+}
+
+/*footer */
+footer  {
+    text-align: center;
+    margin-top: 25px;
+    background: #dfdfdf;
+    padding: 5px;
+    color: black;
+}
+.end i {
+    padding-top: 5px;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.end i:hover {
+    color: blue;
+}
+/*animation*/
+div .col {
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    color: black;
+    text-transform: none;
+    margin: 0 20px;
+    opacity: 1.0;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+
+
+
+@media only screen and (max-width: 700px) {
+    .menu-bar {
+        display: block;
+    }
+    nav ul {
+        width: 100%;
+        position: fixed;
+        background: #170d34;
+        overflow: hidden;
+        height: 100vh;
+        top: 80px;
+        text-align: center;
+        left: -100%;
+        z-index: 1;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        line-height: 30px;
+        margin: 50px 0;
+    }
+    nav ul li a {
+        color: #dfdfdf;
+        font-size: 30px;
+    }
+    nav ul.show {
+        left: 0;
+    }
+    .row {
+        flex-direction: column-reverse;
+        margin: 30px 0;
+        
+    }
+    .map {
+        display: flex;
+        margin: 10px 3px;
+    }
+    .container-2 h2 {
+        position: relative;
+        right: 40px;
+    }
+    .container-2 .fab {
+        font-size: 30px;
+    }
+    .post {
+        grid-template-columns: 1fr ;
+        margin-left: 20px;
+        
+    }
+    .sector-1 {
+        
+    }
+    
+}

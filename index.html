@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Nathan</h2>
+            <nav>
+                <ul id="menu-list" >
+                    <li><a onclick="addFunction()" href="#">Home</a></li>
+                    <li><a onclick="addFunction()" href="#project">Project</a></li>
+                    <li><a onclick="addFunction()" href="#about">About</a></li>
+                </ul>
+            </nav>
+            <label id="icon" class="menu-bar">
+                <i onclick="addFunction()" class="fas fa-bars"></i>
+            </label>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Hello! I am Oak.</h2>
+                <h3>I'm junior web developer & student</h3>
+                <button type="button" class="map"><a href="https://github.com/Oaksoekhant-Raven">View my Github</a></button>
+
+            </div>
+            <div class="col-2">
+                <img src="img/pj1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container-2" id="about">
+            <h2>About me!</h2>
+            <p class="para">Hi!My name is Oak Soe Khant and I am web developer with a passion for front-end development.I aspire toward a career that will allow me to channel my creativity through building beautiful software and engaging experiences. </p>
+            <p class="para">i've been learning web development for about 1 year and these are the things that i learned.</p>
+            <span><i id="icon-1" class="fab fa-html5"></i></span>
+            <span><i id="icon-2" class="fab fa-css3-alt"></i></span>
+            <span><i id="icon-3" class="fab fa-js"></i></span>
+            <span><i id="icon-4" class="fab fa-php"></i></span>
+            <span><i id="icon-5" class="fab fa-react"></i></span>
+        </div>
+    </div>
+    <div>
+        <section class="main" id="project">
+            <h2>Projects</h2>
+            <div class="post">
+                <div class="fade">
+                    <a href="https://github.com/Oaksoekhant-Raven">
+                        <div class="sector-1">
+                            <img src="img/1.png" alt="" class="image">
+                            <h6>JS To Do List</h6>
+                            <div class="middle">
+                                <div class="icon"><i class="fab fa-github"></i></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="fade">
+                    <a href="https://github.com/Oaksoekhant-Raven">
+                        <div class="sector-1">
+                            <img src="img/2.png" alt="" class="image">
+                            <h6>OS project</h6>
+                            <div class="middle">
+                                <div class="icon"><i class="fab fa-github"></i></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="fade">
+                    <a href="https://github.com/Oaksoekhant-Raven">
+                        <div class="sector-1">
+                            <img src="img/Screenshot-1.png" alt="" class="image">
+                            <h6>Items order Form</h6>
+                            <div class="middle">
+                                <div class="icon"><i class="fab fa-github"></i></div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="fade">
+                    <a href="https://github.com/Oaksoekhant-Raven">
+                        <div class="sector-1">
+                            <img src="img/Screenshot-2.png" alt="" class="image">
+                            <h6>Portfolio</h6>
+                            <div class="middle">
+                                <div class="icon"><i class="fab fa-github"></i></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="fade">
+                    <a href="https://github.com/Oaksoekhant-Raven">
+                        <div class="sector-1">
+                            <img src="img/react_todo.png" alt="" class="image">
+                            <h6>React To Do </h6>
+                            <div class="middle">
+                                <div class="icon"><i class="fab fa-github"></i></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            
+        </section>
+    </div>
+    <footer>
+        <h3>Web Design By Oak.</h3>
+        <div class="end">
+            <a href="https://www.linkedin.com/in/oak-soe-khant-b440271b4/"><i class="fab fa-linkedin"></i></a>
+            <a href=""><i class="far fa-envelope"></i></a>
+        </div>
+
+    </footer>
+    <script>
+        function addFunction() {
+            var link = document.getElementById("menu-list");
+            link.classList.toggle("show");
+        }
+
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                /* check the location*/
+                $('.fade').each(function(i) {
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    /* If the object is completely visible in the window, fade it it */
+
+                    if( bottom_of_window > bottom_of_object ){
+                        $(this).animate({'opacity':'1'},900);
+                    
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+</body>
+</html>
